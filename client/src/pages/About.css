@@ -23,6 +23,19 @@
   opacity: 0.3;
 }
 
+.mission-value:last-child {
+  grid-column: 1 / -1; /* make it span full row */
+  max-width: 300px;    /* optional: limit width */
+  justify-self: center;
+}
+
+.contact-item:last-child {
+  grid-column: 1 / -1;   /* force full row */
+  justify-self: center; /* center it */
+  max-width: 300px;     /* optional: keeps it from stretching */
+}
+
+
 .hero-content {
   position: relative;
   z-index: 1;

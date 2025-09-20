@@ -67,10 +67,10 @@ const About = () => {
               <div className="timeline-content">
                 <div className="timeline-year">2010</div>
                 <h3 className="timeline-title">The Beginning</h3>
-                <p className="timeline-description">
+                {/* <p className="timeline-description">
                   Project Lovematch was founded with a simple vision: to bring the joy of tennis 
                   to children with special needs in our community.
-                </p>
+                </p> */}
               </div>
               <div className="timeline-dot"></div>
             </div>
@@ -79,10 +79,10 @@ const About = () => {
               <div className="timeline-content">
                 <div className="timeline-year">2015</div>
                 <h3 className="timeline-title">Growing Impact</h3>
-                <p className="timeline-description">
+                {/* <p className="timeline-description">
                   The program expanded to serve more families and established partnerships with 
                   local schools and organizations.
-                </p>
+                </p> */}
               </div>
               <div className="timeline-dot"></div>
             </div>
@@ -91,10 +91,10 @@ const About = () => {
               <div className="timeline-content">
                 <div className="timeline-year">2020</div>
                 <h3 className="timeline-title">Adaptation & Resilience</h3>
-                <p className="timeline-description">
+                {/* <p className="timeline-description">
                   Despite challenges, we found innovative ways to continue serving our community 
                   and supporting our athletes.
-                </p>
+                </p> */}
               </div>
               <div className="timeline-dot"></div>
             </div>
@@ -103,10 +103,10 @@ const About = () => {
               <div className="timeline-content">
                 <div className="timeline-year">2024</div>
                 <h3 className="timeline-title">Looking Forward</h3>
-                <p className="timeline-description">
+                {/* <p className="timeline-description">
                   Continuing our mission to create more opportunities and reach more families 
                   in need of our services.
-                </p>
+                </p> */}
               </div>
               <div className="timeline-dot"></div>
             </div>
@@ -124,11 +124,11 @@ const About = () => {
               <div className="leadership-info">
                 <h3 className="leadership-name">Joe Castaneda</h3>
                 <div className="leadership-role">Program Director</div>
-                <p className="leadership-description">
+                {/* <p className="leadership-description">
                   Joe has been the driving force behind Project Lovematch since its inception. 
                   His passion for tennis and commitment to serving children with special needs 
                   has shaped our program into what it is today.
-                </p>
+                </p> */}
                 <a href="mailto:projectlovematch@yahoo.com" className="leadership-contact">
                   📧 projectlovematch@yahoo.com
                 </a>

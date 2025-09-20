@@ -75,7 +75,7 @@ const Home = () => {
               <p className="about-description">
                 Project Lovematch is a nonprofit program that runs each winter from January through March 
                 at the Franklin Lakes Racquet Club, where we hold weekly one-hour tennis sessions 
-                (4:00–5:00 pm) for ten weeks.
+                (4:00–5:00 pm) on Sunday for ten weeks.
               </p>
               <p className="about-description">
                 We pair a large group of volunteers with mentally challenged children—including those with 
@@ -91,7 +91,7 @@ const Home = () => {
                 <div className="feature">
                   <div className="feature-icon">⏰</div>
                   <h3>4:00-5:00 PM</h3>
-                  <p>Perfect after-school timing</p>
+                  <p>Every Sunday Afternoon</p>
                 </div>
                 <div className="feature">
                   <div className="feature-icon">🏆</div>
