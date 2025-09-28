@@ -90,8 +90,11 @@ const Home = () => {
                 </div>
                 <div className="feature">
                   <div className="feature-icon">⏰</div>
-                  <h3>4:00-5:00 PM</h3>
-                  <p>Every Sunday Afternoon</p>
+                  <h3>
+                    4:00-5:00 PM
+                    <br />
+                    <span style={{ fontWeight: 'normal', fontSize: '0.95em' }}>Every Sunday Afternoon</span>
+                  </h3>
                 </div>
                 <div className="feature">
                   <div className="feature-icon">🏆</div>
@@ -104,7 +107,7 @@ const Home = () => {
               <div className="image-placeholder">
                 <div className="placeholder-content">
                   <span className="placeholder-icon">🎾</span>
-                  <p>Tennis Court Image</p>
+                  <p>Image</p>
                 </div>
               </div>
             </div>
@@ -191,7 +194,11 @@ const Home = () => {
               </div>
               <div className="info-item">
                 <span className="info-icon">⏰</span>
-                <span>4:00 - 5:00 PM</span>
+                <span>
+                  Sundays
+                  <br />
+                  4:00 - 5:00 PM
+                </span>
               </div>
             </div>
           </div>

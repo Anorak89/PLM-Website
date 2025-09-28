@@ -439,17 +439,18 @@ const SignUp = () => {
             <div className="contact-details">
               <div className="contact-item">
                 <span className="contact-icon">📧</span>
-                <span className="contact-text">projectlovematch@yahoo.com</span>
+                <div className="contact-content">
+                  <span className="contact-label">Email</span>
+                  <span className="contact-text">projectlovematch@gmail.com</span>
+                </div>
               </div>
               
               <div className="contact-item">
                 <span className="contact-icon">📞</span>
-                <span className="contact-text">(201) 669-9436</span>
-              </div>
-              
-              <div className="contact-item">
-                <span className="contact-icon">👨‍💼</span>
-                <span className="contact-text">Joe Castaneda, Program Director</span>
+                <div className="contact-content">
+                  <span className="contact-label">Phone</span>
+                  <span className="contact-text">(201) 669-9436</span>
+                </div>
               </div>
             </div>
           </div>

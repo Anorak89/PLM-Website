@@ -122,16 +122,16 @@ const About = () => {
             <div className="leadership-card">
               <div className="leadership-image">👨‍💼</div>
               <div className="leadership-info">
-                <h3 className="leadership-name">Joe Castaneda</h3>
+                <h3 className="leadership-name"></h3>
                 <div className="leadership-role">Program Director</div>
                 {/* <p className="leadership-description">
                   Joe has been the driving force behind Project Lovematch since its inception. 
                   His passion for tennis and commitment to serving children with special needs 
                   has shaped our program into what it is today.
                 </p> */}
-                <a href="mailto:projectlovematch@yahoo.com" className="leadership-contact">
+                {/* <a href="mailto:projectlovematch@yahoo.com" className="leadership-contact">
                   📧 projectlovematch@yahoo.com
-                </a>
+                </a> */}
               </div>
             </div>
             
@@ -141,8 +141,8 @@ const About = () => {
                 <h3 className="leadership-name">Board of Directors</h3>
                 <div className="leadership-role">Strategic Leadership</div>
                 <p className="leadership-description">
-                  Our dedicated board members provide strategic guidance and ensure the long-term 
-                  sustainability of Project Lovematch's mission and programs.
+                  {/* Our dedicated board members provide strategic guidance and ensure the long-term 
+                  sustainability of Project Lovematch's mission and programs. */}
                 </p>
               </div>
             </div>
@@ -175,7 +175,7 @@ const About = () => {
               <div className="contact-item">
                 <span className="contact-icon">📧</span>
                 <span className="contact-label">Email</span>
-                <span className="contact-value">projectlovematch@yahoo.com</span>
+                <span className="contact-value">projectlovematch@gmail.com</span>
               </div>
               
               <div className="contact-item">

@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import Calendar from 'react-calendar';
 import './Calendar.css';
 
 const CalendarPage = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
-  const [currentMonth, setCurrentMonth] = useState(new Date());
+  const [currentDate, setCurrentDate] = useState(new Date());
 
   // Generate Sunday sessions for the next 2 years
   const generateSessions = () => {
@@ -24,34 +23,63 @@ const CalendarPage = () => {
 
   const sessions = generateSessions();
 
-  const tileContent = ({ date, view }) => {
-    if (view === 'month') {
-      const isSessionDay = sessions.some(session => 
-        session.toDateString() === date.toDateString()
-      );
-      
-      if (isSessionDay) {
-        return (
-          <div className="session-indicator">
-            <span className="session-dot"></span>
-          </div>
-        );
-      }
-    }
-    return null;
+  // Custom calendar functions
+  const getDaysInMonth = (date) => {
+    return new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
   };
 
-  const tileClassName = ({ date, view }) => {
-    if (view === 'month') {
-      const isSessionDay = sessions.some(session => 
-        session.toDateString() === date.toDateString()
-      );
-      
-      if (isSessionDay) {
-        return 'session-day';
-      }
+  const getFirstDayOfMonth = (date) => {
+    return new Date(date.getFullYear(), date.getMonth(), 1).getDay();
+  };
+
+  const getMonthName = (date) => {
+    return date.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+  };
+
+  const isSessionDay = (date) => {
+    return sessions.some(session => 
+      session.toDateString() === date.toDateString()
+    );
+  };
+
+  const isToday = (date) => {
+    const today = new Date();
+    return date.toDateString() === today.toDateString();
+  };
+
+  const isSelectedDate = (date) => {
+    return date.toDateString() === selectedDate.toDateString();
+  };
+
+  const generateCalendarDays = () => {
+    const daysInMonth = getDaysInMonth(currentDate);
+    const firstDay = getFirstDayOfMonth(currentDate);
+    const days = [];
+
+    // Add empty cells for days before the month starts
+    for (let i = 0; i < firstDay; i++) {
+      days.push(null);
     }
-    return null;
+
+    // Add all days of the month
+    for (let day = 1; day <= daysInMonth; day++) {
+      const date = new Date(currentDate.getFullYear(), currentDate.getMonth(), day);
+      days.push(date);
+    }
+
+    return days;
+  };
+
+  const navigateMonth = (direction) => {
+    const newDate = new Date(currentDate);
+    newDate.setMonth(currentDate.getMonth() + direction);
+    setCurrentDate(newDate);
+  };
+
+  const handleDateClick = (date) => {
+    if (date) {
+      setSelectedDate(date);
+    }
   };
 
   const getUpcomingSessions = () => {
@@ -75,14 +103,6 @@ const CalendarPage = () => {
     });
   };
 
-  const handleDateChange = (date) => {
-    setSelectedDate(date);
-  };
-
-  const handleNavigationChange = (activeStartDate) => {
-    setCurrentMonth(activeStartDate);
-  };
-
   return (
     <div className="calendar-page">
       <div className="calendar-hero">
@@ -99,17 +119,63 @@ const CalendarPage = () => {
           <div className="calendar-grid">
             <div className="calendar-main">
               <div className="calendar-wrapper">
-                <Calendar
-                  onChange={handleDateChange}
-                  value={selectedDate}
-                  tileContent={tileContent}
-                  tileClassName={tileClassName}
-                  onActiveStartDateChange={handleNavigationChange}
-                  minDate={new Date()}
-                  maxDate={null} // No maximum date - infinite future
-                  showNeighboringMonth={false}
-                  className="tennis-calendar"
-                />
+                <div className="custom-calendar">
+                  {/* Calendar Header */}
+                  <div className="calendar-header">
+                    <button 
+                      className="nav-button"
+                      onClick={() => navigateMonth(-1)}
+                      aria-label="Previous month"
+                    >
+                      ‹
+                    </button>
+                    <h2 className="month-year">{getMonthName(currentDate)}</h2>
+                    <button 
+                      className="nav-button"
+                      onClick={() => navigateMonth(1)}
+                      aria-label="Next month"
+                    >
+                      ›
+                    </button>
+                  </div>
+
+                  {/* Days of Week Header */}
+                  <div className="weekdays-header">
+                    {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map(day => (
+                      <div key={day} className="weekday-label">{day}</div>
+                    ))}
+                  </div>
+
+                  {/* Calendar Grid */}
+                  <div className="calendar-grid">
+                    {generateCalendarDays().map((date, index) => (
+                      <div
+                        key={index}
+                        className={`calendar-day ${
+                          date ? 'active-day' : 'empty-day'
+                        } ${
+                          date && isToday(date) ? 'today' : ''
+                        } ${
+                          date && isSelectedDate(date) ? 'selected' : ''
+                        } ${
+                          date && isSessionDay(date) ? 'session-day' : ''
+                        }`}
+                        onClick={() => handleDateClick(date)}
+                      >
+                        {date && (
+                          <>
+                            <span className="day-number">{date.getDate()}</span>
+                            {isSessionDay(date) && (
+                              <div className="session-indicator">
+                                <span className="session-dot"></span>
+                              </div>
+                            )}
+                          </>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
               
               <div className="calendar-legend">
