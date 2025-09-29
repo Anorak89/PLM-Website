@@ -147,7 +147,7 @@ const CalendarPage = () => {
                   </div>
 
                   {/* Calendar Grid */}
-                  <div className="calendar-grid">
+                  <div className="calendar-days-grid">
                     {generateCalendarDays().map((date, index) => (
                       <div
                         key={index}

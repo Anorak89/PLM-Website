@@ -53,6 +53,13 @@
   align-items: start;
   max-width: 1400px;
   margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 1500px) {
+  .calendar-grid {
+    padding: 0 1.5rem;
+  }
 }
 
 .calendar-main {
@@ -67,6 +74,19 @@
   padding: 3.5rem;
   box-shadow: var(--shadow-xl);
   border: 1px solid var(--gray-100);
+  overflow: hidden;
+}
+
+@media (max-width: 1600px) {
+  .calendar-wrapper {
+    padding: 3rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .calendar-wrapper {
+    padding: 2.5rem;
+  }
 }
 
 /* Custom Calendar Styles */
@@ -84,6 +104,23 @@
   margin-bottom: 3rem;
   padding: 0 1.5rem;
   gap: 2rem;
+  flex-wrap: nowrap;
+}
+
+@media (max-width: 768px) {
+  .calendar-header {
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-header {
+    margin-bottom: 1.5rem;
+    padding: 0 0.5rem;
+    gap: 0.75rem;
+  }
 }
 
 .nav-button {
@@ -100,6 +137,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .nav-button {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.1rem;
+    min-width: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-button {
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    min-width: 40px;
+  }
 }
 
 .nav-button:hover {
@@ -121,6 +175,24 @@
   min-width: 200px;
   text-align: center;
   flex-shrink: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 768px) {
+  .month-year {
+    font-size: 1.25rem;
+    padding: 1rem 1.75rem;
+    min-width: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .month-year {
+    font-size: 1rem;
+    padding: 0.875rem 1.25rem;
+    min-width: 120px;
+  }
 }
 
 .weekdays-header {
@@ -140,12 +212,54 @@
   background: var(--gray-50);
   border-radius: 0.5rem;
   text-align: center;
+  box-sizing: border-box;
 }
 
-.calendar-grid {
+@media (max-width: 1200px) {
+  .weekday-label {
+    padding: 1.25rem 0.5rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .weekday-label {
+    padding: 1rem 0.25rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .weekday-label {
+    padding: 0.75rem 0.125rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.02em;
+  }
+}
+
+.calendar-days-grid {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 12px;
+  width: 100%;
+}
+
+@media (max-width: 1200px) {
+  .calendar-days-grid {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .calendar-days-grid {
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-days-grid {
+    gap: 6px;
+  }
 }
 
 .calendar-day {
@@ -163,6 +277,39 @@
   border: 2px solid transparent;
   cursor: pointer;
   background: var(--white);
+  aspect-ratio: 1;
+  box-sizing: border-box;
+}
+
+@media (max-width: 1600px) {
+  .calendar-day {
+    min-height: 75px;
+    padding: 1.25rem 0.5rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .calendar-day {
+    min-height: 70px;
+    padding: 1rem 0.5rem;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .calendar-day {
+    min-height: 60px;
+    padding: 0.75rem 0.25rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-day {
+    min-height: 50px;
+    padding: 0.5rem 0.125rem;
+    font-size: 0.85rem;
+  }
 }
 
 .calendar-day.empty-day {
@@ -449,6 +596,7 @@
   .calendar-grid {
     grid-template-columns: 1fr 450px;
     max-width: 1200px;
+    gap: 3rem;
   }
 }
 
@@ -456,16 +604,13 @@
   .calendar-grid {
     grid-template-columns: 1fr;
     gap: 3rem;
-    max-width: 800px;
+    max-width: 900px;
+    padding: 0 1rem;
   }
   
   .calendar-sidebar {
     order: -1;
     position: static;
-  }
-  
-  .calendar-wrapper {
-    padding: 2.5rem;
   }
 }
 
@@ -474,57 +619,26 @@
     font-size: 2.5rem;
   }
   
-  .calendar-wrapper {
-    padding: 2.5rem;
-  }
-  
-  .calendar-day {
-    padding: 1.25rem 0.5rem;
-    min-height: 70px;
-    font-size: 0.875rem;
-  }
-  
-  .nav-button {
-    padding: 0.875rem 1.25rem;
-    font-size: 1rem;
-    min-width: 45px;
-  }
-  
-  .month-year {
-    font-size: 1.125rem;
-    padding: 1rem 1.75rem;
-    min-width: 180px;
-  }
-  
-  .calendar-header {
-    gap: 1.5rem;
-    margin-bottom: 2.5rem;
+  .calendar-grid {
+    padding: 0 0.5rem;
   }
   
   .calendar-legend,
   .selected-date-info,
   .upcoming-sessions,
   .program-info {
-    padding: 2.25rem;
+    padding: 2rem;
   }
   
   .upcoming-session,
   .info-item {
-    padding: 1.75rem;
-    gap: 1.75rem;
-  }
-  
-  .weekday-label {
-    padding: 1rem 0.5rem;
-    font-size: 0.75rem;
-  }
-  
-  .calendar-grid {
-    gap: 10px;
+    padding: 1.5rem;
+    gap: 1.5rem;
   }
   
   .weekdays-header {
-    gap: 10px;
+    gap: 8px;
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -541,46 +655,16 @@
     padding: 2rem 0;
   }
   
-  .calendar-day {
-    padding: 1rem 0.25rem;
-    min-height: 60px;
-    font-size: 0.8rem;
-  }
-  
   .calendar-grid {
-    gap: 6px;
-  }
-  
-  .weekdays-header {
-    gap: 6px;
-    margin-bottom: 1.5rem;
+    padding: 0 0.25rem;
   }
   
   .calendar-wrapper {
     padding: 1.5rem;
   }
   
-  .calendar-header {
-    margin-bottom: 2rem;
-    gap: 1rem;
-    padding: 0 0.5rem;
-  }
-  
-  .nav-button {
-    padding: 0.75rem 1rem;
-    font-size: 0.9rem;
-    min-width: 40px;
-  }
-  
-  .month-year {
-    font-size: 1rem;
-    padding: 0.875rem 1.25rem;
-    min-width: 140px;
-  }
-  
-  .weekday-label {
-    padding: 0.75rem 0.25rem;
-    font-size: 0.7rem;
+  .weekdays-header {
+    margin-bottom: 1rem;
   }
   
   .calendar-legend,
@@ -592,23 +676,24 @@
   
   .upcoming-session,
   .info-item {
-    padding: 1.5rem;
-    gap: 1.25rem;
+    padding: 1.25rem;
+    gap: 1rem;
     margin-bottom: 1.25rem;
   }
   
   .session-date {
-    min-width: 70px;
-    padding: 0.875rem 1.25rem;
+    min-width: 65px;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
   }
   
   .session-time {
-    font-size: 1rem;
+    font-size: 0.95rem;
     white-space: nowrap;
   }
   
   .session-location {
-    font-size: 0.875rem;
+    font-size: 0.85rem;
     word-break: normal;
     overflow-wrap: anywhere;
   }
