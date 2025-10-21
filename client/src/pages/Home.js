@@ -73,14 +73,14 @@ const Home = () => {
             <div className="about-text">
               <h2 className="section-title">Empowering Through Tennis</h2>
               <p className="about-description">
-                Project Lovematch is a nonprofit program that runs each winter from January through March 
-                at the Franklin Lakes Racquet Club, where we hold weekly one-hour tennis sessions 
-                (4:00–5:00 pm) on Sunday for ten weeks.
+                Project Lovematch is an annual program which provides basic tennis instruction and activity focused on
+athletes with various developmental issues including mental retardation, down syndrome, autism, visual
+impairment, neurological impairments and attention deficit disorder. For over 30 years, the program has engaged local high school
+students as volunteers to develop one-one-one relationships with the athletes, providing a positive
+experience for all involved.
               </p>
               <p className="about-description">
-                We pair a large group of volunteers with mentally challenged children—including those with 
-                autism, Down syndrome, and other developmental challenges—to give them the opportunity 
-                to learn and enjoy tennis in a supportive, encouraging environment.
+                The Program is offered at the Franklin Lakes Racquet Club on ten Sundays from January through March from 4:00 to 5:00 PM.
               </p>
               <div className="about-features">
                 <div className="feature">
@@ -125,41 +125,82 @@ const Home = () => {
           
           <div className="photos-grid">
             <div className="photo-card scale-in">
-              <div className="photo-placeholder">
-                <div className="placeholder-content">
-                  <span className="placeholder-icon">📸</span>
-                  <p>Volunteer helping athlete</p>
+              <div className="photo-container">
+                <img 
+                  src="/images/IMG_9252.JPG" 
+                  alt="Tennis program activity"
+                  className="photo-image"
+                />
+                <div className="photo-overlay">
+                  <div className="photo-caption-overlay">
+                    <h3>Building Connections</h3>
+                  </div>
                 </div>
               </div>
               <div className="photo-caption">
-                <h3>Building Confidence</h3>
-                <p>Volunteers work one-on-one with athletes to develop tennis skills</p>
+                <p className="photo-description">
+                  Volunteers and athletes working together to build lasting friendships through tennis
+                </p>
               </div>
             </div>
             
             <div className="photo-card scale-in">
-              <div className="photo-placeholder">
-                <div className="placeholder-content">
-                  <span className="placeholder-icon">📸</span>
-                  <p>Group tennis activity</p>
+              <div className="photo-container">
+                <img 
+                  src="/images/IMG_9257.JPG" 
+                  alt="Group tennis session"
+                  className="photo-image"
+                />
+                <div className="photo-overlay">
+                  <div className="photo-caption-overlay">
+                    <h3>Team Spirit</h3>
+                  </div>
                 </div>
               </div>
               <div className="photo-caption">
-                <h3>Team Spirit</h3>
-                <p>Group activities foster friendship and inclusion</p>
+                <p className="photo-description">
+                  Group activities that foster teamwork and inclusive participation for everyone
+                </p>
               </div>
             </div>
             
             <div className="photo-card scale-in">
-              <div className="photo-placeholder">
-                <div className="placeholder-content">
-                  <span className="placeholder-icon">📸</span>
-                  <p>Celebration moment</p>
+              <div className="photo-container">
+                <img 
+                  src="/images/IMG_9301.JPG" 
+                  alt="Tennis skill development"
+                  className="photo-image"
+                />
+                <div className="photo-overlay">
+                  <div className="photo-caption-overlay">
+                    <h3>Skill Development</h3>
+                  </div>
                 </div>
               </div>
               <div className="photo-caption">
-                <h3>Celebrating Success</h3>
-                <p>Every achievement, big or small, is celebrated together</p>
+                <p className="photo-description">
+                  One-on-one coaching helps athletes develop confidence and tennis fundamentals
+                </p>
+              </div>
+            </div>
+            
+            <div className="photo-card scale-in">
+              <div className="photo-container">
+                <img 
+                  src="/images/IMG_9304.JPG" 
+                  alt="Celebrating achievements"
+                  className="photo-image"
+                />
+                <div className="photo-overlay">
+                  <div className="photo-caption-overlay">
+                    <h3>Celebrating Success</h3>
+                  </div>
+                </div>
+              </div>
+              <div className="photo-caption">
+                <p className="photo-description">
+                  Every achievement, big or small, is celebrated together as a community
+                </p>
               </div>
             </div>
           </div>

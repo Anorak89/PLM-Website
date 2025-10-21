@@ -23,10 +23,11 @@ const About = () => {
           <div className="mission-content">
             <h2 className="section-title">Our Mission</h2>
             <p className="mission-text">
-              Project Lovematch is dedicated to creating inclusive opportunities for children with 
-              special needs to learn and enjoy tennis in a supportive, encouraging environment. 
-              We believe that every child deserves the chance to experience the joy of sports, 
-              build confidence, and form meaningful friendships.
+              Project Lovematch provides basic tennis instruction and activity focused on athletes with various
+developmental issues including mental retardation, down syndrome, autism, visual impairment, neurological
+impairments and attention deficit disorder. The program engages local high school students as volunteers to
+develop one-one-one relationships with the athletes, providing a positive experience for all involved. Our
+program has been operating for over 30-years, with some of our athletes participating the entire time.
             </p>
             
             <div className="mission-values">
