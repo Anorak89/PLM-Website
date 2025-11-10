@@ -137,6 +137,19 @@
   60% { transform: translateX(-50%) translateY(-5px); }
 }
 
+/* Animation Classes */
+.scale-in {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+  visibility: visible !important;
+}
+
+.fade-in, .slide-in-left, .slide-in-right {
+  opacity: 1 !important;
+  transform: translateX(0) translateY(0) !important;
+  visibility: visible !important;
+}
+
 /* About Section */
 .about-section {
   padding: 8rem 0;
@@ -237,6 +250,7 @@
 .photos-section {
   padding: 8rem 0;
   background: var(--white);
+  min-height: 500px;
 }
 
 .photos-grid {
@@ -256,6 +270,7 @@
   box-shadow: var(--shadow-lg);
   transition: all 0.4s ease;
   position: relative;
+  min-height: 400px;
 }
 
 .photo-card:hover {
@@ -276,6 +291,7 @@
   object-fit: cover;
   object-position: center;
   transition: transform 0.4s ease;
+  display: block;
 }
 
 .photo-card:hover .photo-image {

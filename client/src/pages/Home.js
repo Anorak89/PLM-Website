@@ -1,6 +1,10 @@
 import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
+import img1 from '../assets/IMG_9252.JPG';
+import img2 from '../assets/IMG_9257.JPG';
+import img3 from '../assets/IMG_9301.JPG';
+import img4 from '../assets/IMG_9304.JPG';
 
 const Home = () => {
   const heroRef = useRef(null);
@@ -127,7 +131,7 @@ experience for all involved.
             <div className="photo-card scale-in">
               <div className="photo-container">
                 <img 
-                  src="/images/IMG_9252.JPG" 
+                  src={img1} 
                   alt="Tennis program activity"
                   className="photo-image"
                 />
@@ -147,7 +151,7 @@ experience for all involved.
             <div className="photo-card scale-in">
               <div className="photo-container">
                 <img 
-                  src="/images/IMG_9257.JPG" 
+                  src={img2} 
                   alt="Group tennis session"
                   className="photo-image"
                 />
@@ -167,7 +171,7 @@ experience for all involved.
             <div className="photo-card scale-in">
               <div className="photo-container">
                 <img 
-                  src="/images/IMG_9301.JPG" 
+                  src={img3} 
                   alt="Tennis skill development"
                   className="photo-image"
                 />
@@ -179,7 +183,7 @@ experience for all involved.
               </div>
               <div className="photo-caption">
                 <p className="photo-description">
-                  One-on-one coaching helps athletes develop confidence and tennis fundamentals
+                  Personalized coaching helps athletes develop confidence and tennis fundamentals
                 </p>
               </div>
             </div>
@@ -187,7 +191,7 @@ experience for all involved.
             <div className="photo-card scale-in">
               <div className="photo-container">
                 <img 
-                  src="/images/IMG_9304.JPG" 
+                  src={img4} 
                   alt="Celebrating achievements"
                   className="photo-image"
                 />
