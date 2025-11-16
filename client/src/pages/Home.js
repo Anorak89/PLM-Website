@@ -111,7 +111,7 @@ experience for all involved.
               <div className="image-placeholder">
                 <div className="placeholder-content">
                   <span className="placeholder-icon">🎾</span>
-                  <p>Image</p>
+                  <p>Logo</p>
                 </div>
               </div>
             </div>
@@ -122,7 +122,7 @@ experience for all involved.
       {/* Photos Section */}
       <section ref={photosRef} className="photos-section slide-in-right">
         <div className="container">
-          <h2 className="section-title">Moments of Joy</h2>
+          <h2 className="section-title">Program Highlights</h2>
           <p className="section-subtitle">
             See the impact of our program through the eyes of our volunteers and athletes
           </p>
@@ -203,7 +203,7 @@ experience for all involved.
               </div>
               <div className="photo-caption">
                 <p className="photo-description">
-                  Every achievement, big or small, is celebrated together as a community
+                  Every achievement is celebrated together as a supportive community
                 </p>
               </div>
             </div>

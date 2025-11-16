@@ -5,6 +5,7 @@ import './Navbar.css';
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isSignUpOpen, setIsSignUpOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -22,6 +23,7 @@ const Navbar = () => {
 
   const closeMenu = () => {
     setIsMenuOpen(false);
+    setIsSignUpOpen(false);
   };
 
   const isActive = (path) => {
@@ -70,14 +72,34 @@ const Navbar = () => {
               About
             </Link>
           </li>
-          <li>
-            <Link 
-              to="/signup" 
-              className={`navbar-link ${isActive('/signup') ? 'active' : ''}`}
-              onClick={closeMenu}
-            >
+          <li 
+            className="navbar-dropdown"
+            onMouseEnter={() => setIsSignUpOpen(true)}
+            onMouseLeave={() => setIsSignUpOpen(false)}
+          >
+            <span className={`navbar-link ${isActive('/signup') ? 'active' : ''}`}>
               Sign Up
-            </Link>
+              <span className={`dropdown-arrow ${isSignUpOpen ? 'open' : ''}`}>▼</span>
+            </span>
+            <ul className={`dropdown-menu ${isSignUpOpen ? 'show' : ''}`}>
+              <li>
+                <a 
+                  href="https://forms.gle/g9Cgfbo2Mixnjy8n9" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="dropdown-link"
+                  onClick={closeMenu}
+                >
+                  Volunteer Sign Up
+                </a>
+              </li>
+              <li>
+                <span className="dropdown-link disabled">
+                  Athlete Sign Up
+                  <span className="coming-soon">Coming Soon</span>
+                </span>
+              </li>
+            </ul>
           </li>
         </ul>
       </div>
