@@ -1,71 +1,78 @@
 # Project Lovematch Website
 
-Official website for Project Lovematch, a nonprofit organization that provides tennis sessions for mentally challenged children.
+Official website for Project Lovematch, a nonprofit organization that provides tennis sessions for children with developmental challenges.
 
 ## About Project Lovematch
 
-Project Lovematch is a nonprofit program that runs each winter from January through March at the Franklin Lakes Racquet Club, where it holds weekly one-hour tennis sessions (4:00–5:00 pm) for ten weeks. The program pairs volunteers with mentally challenged children—including those with autism, Down syndrome, and other developmental challenges—to give them the opportunity to learn and enjoy tennis in a supportive, encouraging environment.
+Project Lovematch is a nonprofit program that runs each winter from January through March at the Franklin Lakes Racquet Club, where it holds weekly one-hour tennis sessions (4:00–5:00 PM) for ten weeks. The program pairs volunteers with children with developmental challenges—including those with autism, Down syndrome, and other developmental disabilities—to give them the opportunity to learn and enjoy tennis in a supportive, encouraging environment.
+
+The program has been operating for over 30 years, with some athletes participating the entire time.
 
 ## Features
 
-- **Home/Landing Page**: Introduction to Project Lovematch with photos
-- **Calendar Page**: Interactive calendar showing sessions and events
-- **About Page**: History and leadership team information
-- **Sign Up Forms**: Secure forms for volunteers and athletes
-- **Responsive Design**: Modern, professional interface
+- **Home/Landing Page**: Introduction to Project Lovematch with photos and program highlights
+- **Calendar Page**: Interactive calendar showing Sunday tennis sessions from January through March
+- **About Page**: Mission, history, and leadership team information
+- **Volunteer Sign Up**: External Google Forms link for volunteer registration
+- **Responsive Design**: Modern, professional interface that works on all devices
 
 ## Tech Stack
 
 - **Frontend**: React.js with modern CSS
-- **Backend**: Node.js with Express
-- **Data Storage**: Google Sheets API integration
-- **Security**: Helmet, rate limiting, input validation
+- **Deployment**: Static site hosting (Render, Netlify, Vercel, etc.)
 
 ## Setup Instructions
 
 1. **Install Dependencies**
    ```bash
-   npm run install-all
+   cd client
+   npm install
    ```
 
-2. **Environment Setup**
-   - Create a `.env` file in the root directory
-   - Add your Google Sheets API credentials:
-     ```
-     GOOGLE_SHEETS_PRIVATE_KEY=your_private_key
-     GOOGLE_SHEETS_CLIENT_EMAIL=your_client_email
-     GOOGLE_SHEETS_SPREADSHEET_ID=your_spreadsheet_id
-     ```
-
-3. **Run Development Server**
+2. **Run Development Server**
    ```bash
-   npm run dev
-   ```
-
-4. **Build for Production**
-   ```bash
-   npm run build
+   cd client
    npm start
    ```
+   The app will open at [http://localhost:3000](http://localhost:3000)
+
+3. **Build for Production**
+   ```bash
+   cd client
+   npm run build
+   ```
+   This creates an optimized production build in the `client/build` directory.
 
 ## Project Structure
 
 ```
 PLM-Website/
 ├── client/                 # React frontend
-├── server/                 # Node.js backend
-├── public/                 # Static assets
-├── package.json           # Main package file
-└── README.md             # This file
+│   ├── public/            # Static assets
+│   ├── src/              # Source code
+│   │   ├── components/   # Reusable components
+│   │   ├── pages/        # Page components
+│   │   └── assets/       # Images and other assets
+│   └── package.json      # Frontend dependencies
+├── package.json          # Root package file
+└── README.md            # This file
 ```
+
+## Deployment
+
+This is a static React application that can be deployed to any static hosting service:
+
+- **Render**: Connect your GitHub repository and set the build command to `cd client && npm run build`
+- **Netlify**: Connect your repository and set the build directory to `client/build`
+- **Vercel**: Connect your repository and it will auto-detect the React app
 
 ## Contact
 
 For questions about Project Lovematch:
-- **Joe Castaneda, Program Director**
-- Email: projectlovematch@yahoo.com
-- Phone: (201) 669-9436
+- **Email**: projectlovematch@gmail.com
+- **Phone**: (201) 669-9436
+- **Location**: Franklin Lakes Racquet Club
 
 ## License
 
-MIT License 
+MIT License

@@ -54,9 +54,14 @@ const Home = () => {
               Where tennis meets compassion, creating opportunities for every athlete to shine
             </p>
             <div className="hero-buttons">
-              <Link to="/signup" className="btn btn-primary">
+              <a 
+                href="https://forms.gle/g9Cgfbo2Mixnjy8n9" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn btn-primary"
+              >
                 Join Our Program
-              </Link>
+              </a>
               <Link to="/about" className="btn btn-secondary">
                 Learn More
               </Link>
@@ -104,14 +109,6 @@ experience for all involved.
                   <div className="feature-icon">🏆</div>
                   <h3>10 Week Program</h3>
                   <p>Comprehensive tennis experience</p>
-                </div>
-              </div>
-            </div>
-            <div className="about-image">
-              <div className="image-placeholder">
-                <div className="placeholder-content">
-                  <span className="placeholder-icon">🎾</span>
-                  <p>Logo</p>
                 </div>
               </div>
             </div>
@@ -221,9 +218,14 @@ experience for all involved.
               for our amazing athletes. Every session counts, every smile matters.
             </p>
             <div className="cta-buttons">
-              <Link to="/signup" className="btn btn-primary btn-large">
+              <a 
+                href="https://forms.gle/g9Cgfbo2Mixnjy8n9" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn btn-primary btn-large"
+              >
                 Volunteer Today
-              </Link>
+              </a>
               <Link to="/calendar" className="btn btn-secondary btn-large">
                 View Schedule
               </Link>
