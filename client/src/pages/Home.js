@@ -12,6 +12,11 @@ const Home = () => {
   const photosRef = useRef(null);
   const ctaRef = useRef(null);
 
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   useEffect(() => {
     const observerOptions = {
       threshold: 0.1,
