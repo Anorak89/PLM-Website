@@ -107,17 +107,10 @@ const CalendarPage = () => {
     <div className="calendar-page">
       <div className="calendar-hero">
         <div className="container">
-          <h1 className="calendar-title">2026 Tennis Schedule | FREE Special Needs Program | Franklin Lakes, NJ</h1>
+          <h1 className="calendar-title">Program Schedule</h1>
           <p className="calendar-subtitle">
-            View our complete schedule for Sunday tennis sessions serving children with autism, Down syndrome, and developmental disabilities from January through March 2026
+            Sunday tennis sessions from January through March
           </p>
-          
-          <div className="schedule-highlights">
-            <div className="highlight-item">📅 Every Sunday | Jan-Mar 2026</div>
-            <div className="highlight-item">⏰ 4:00 PM - 5:00 PM</div>
-            <div className="highlight-item">📍 Franklin Lakes Racquet Club</div>
-            <div className="highlight-item">💰 Completely FREE Program</div>
-          </div>
         </div>
       </div>
 

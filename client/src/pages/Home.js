@@ -51,26 +51,19 @@ const Home = () => {
               Project <span className="highlight">Lovematch</span>
             </h1>
             <p className="hero-subtitle">
-              FREE Tennis Program for Children with Special Needs - Autism, Down Syndrome & Developmental Disabilities in Franklin Lakes, NJ
+              Where tennis meets compassion, creating opportunities for every athlete to shine
             </p>
-            <div className="hero-highlights">
-              <div className="highlight-item">✅ 30+ Years of Service</div>
-              <div className="highlight-item">✅ 100% FREE Program</div>
-              <div className="highlight-item">✅ Professional Instruction</div>
-              <div className="highlight-item">✅ High School Volunteer Coaches</div>
-            </div>
             <div className="hero-buttons">
               <a 
                 href="https://forms.gle/g9Cgfbo2Mixnjy8n9" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="btn btn-primary"
-                aria-label="Join our free special needs tennis program in Franklin Lakes NJ"
               >
-                Join Our Program - FREE
+                Join Our Program
               </a>
               <Link to="/about" className="btn btn-secondary">
-                Learn More About Our Mission
+                Learn More
               </Link>
             </div>
           </div>
@@ -87,63 +80,36 @@ const Home = () => {
         <div className="container">
           <div className="about-content">
             <div className="about-text">
-              <h2 className="section-title">Special Needs Tennis Program | Serving Franklin Lakes & Bergen County for 30+ Years</h2>
+              <h2 className="section-title">Empowering Through Tennis</h2>
               <p className="about-description">
-                <strong>Project Lovematch is a FREE tennis instruction program</strong> specifically designed for children with special needs including <strong>autism, Down syndrome, developmental disabilities, visual impairments, neurological impairments, and attention deficit disorder</strong>. For over three decades, our inclusive program has provided professional tennis instruction at the Franklin Lakes Racquet Club in New Jersey.
+                Project Lovematch is an annual program which provides basic tennis instruction and activity focused on
+athletes with various developmental issues including mental retardation, down syndrome, autism, visual
+impairment, neurological impairments and attention deficit disorder. For over 30 years, the program has engaged local high school
+students as volunteers to develop one-one-one relationships with the athletes, providing a positive
+experience for all involved.
               </p>
               <p className="about-description">
-                Our unique approach pairs each special needs athlete with dedicated <strong>high school student volunteers</strong> who serve as one-on-one coaches, mentors, and friends. This creates meaningful relationships that benefit both our athletes and volunteer coaches, building empathy, confidence, and lasting friendships that extend far beyond the tennis court.
-              </p>
-              <p className="about-description">
-                <strong>Program Details:</strong> The program runs for <strong>10 consecutive Sundays from January through March, 4:00-5:00 PM</strong> at Franklin Lakes Racquet Club. All instruction, equipment, and participation is completely FREE for families. We welcome children of all skill levels - no prior tennis experience required!
+                The Program is offered at the Franklin Lakes Racquet Club on ten Sundays from January through March from 4:00 to 5:00 PM.
               </p>
               <div className="about-features">
                 <div className="feature">
                   <div className="feature-icon">🎾</div>
-                  <h3>FREE Tennis Lessons</h3>
-                  <p>Professional instruction for special needs children with autism, Down syndrome & developmental disabilities</p>
+                  <h3>Weekly Sessions</h3>
+                  <p>Every week from January to March</p>
                 </div>
                 <div className="feature">
                   <div className="feature-icon">⏰</div>
                   <h3>
-                    Sunday Sessions
+                    4:00-5:00 PM
                     <br />
-                    <span style={{ fontWeight: 'normal', fontSize: '0.95em' }}>4:00-5:00 PM | Jan-Mar</span>
+                    <span style={{ fontWeight: 'normal', fontSize: '0.95em' }}>Every Sunday Afternoon</span>
                   </h3>
-                  <p>Consistent weekly schedule in Franklin Lakes, NJ</p>
                 </div>
                 <div className="feature">
                   <div className="feature-icon">🏆</div>
-                  <h3>30+ Years Experience</h3>
-                  <p>Proven track record serving Bergen County special needs community</p>
+                  <h3>10 Week Program</h3>
+                  <p>Comprehensive tennis experience</p>
                 </div>
-              </div>
-              
-              <div className="seo-content">
-                <h3>Why Choose Project Lovematch Tennis Program?</h3>
-                <ul>
-                  <li><strong>Completely FREE:</strong> No cost for instruction, equipment, or participation</li>
-                  <li><strong>Specialized Instruction:</strong> Coaches trained in working with special needs children</li>
-                  <li><strong>Inclusive Environment:</strong> Welcoming space for children with autism, Down syndrome, and all developmental disabilities</li>
-                  <li><strong>One-on-One Attention:</strong> Each athlete paired with a dedicated volunteer coach</li>
-                  <li><strong>Local Program:</strong> Convenient Franklin Lakes location serving Bergen County families</li>
-                  <li><strong>Character Building:</strong> Develops confidence, social skills, and physical fitness</li>
-                  <li><strong>Community Support:</strong> Strong network of families, volunteers, and supporters</li>
-                </ul>
-                
-                <h3>Special Needs Conditions We Serve:</h3>
-                <p>Our adaptive tennis program welcomes children diagnosed with:</p>
-                <ul>
-                  <li>Autism Spectrum Disorder (ASD)</li>
-                  <li>Down Syndrome</li>
-                  <li>Intellectual Disabilities</li>
-                  <li>Developmental Delays</li>
-                  <li>Attention Deficit Hyperactivity Disorder (ADHD)</li>
-                  <li>Visual Impairments</li>
-                  <li>Neurological Conditions</li>
-                  <li>Physical Disabilities</li>
-                  <li>Learning Disabilities</li>
-                </ul>
               </div>
             </div>
           </div>
