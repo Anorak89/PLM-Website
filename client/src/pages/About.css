@@ -23,6 +23,138 @@
   opacity: 0.3;
 }
 
+/* Mission Section Enhancements */
+.mission-highlights {
+  background: #f8f9fa;
+  padding: 2rem;
+  border-radius: 10px;
+  margin: 2rem 0;
+  border-left: 4px solid var(--primary);
+}
+
+.mission-highlights h3 {
+  color: var(--primary);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.mission-highlights ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mission-highlights li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e9ecef;
+  position: relative;
+  padding-left: 2rem;
+}
+
+.mission-highlights li::before {
+  content: "🎾";
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+}
+
+/* Program Details Section */
+.program-details {
+  background: linear-gradient(135deg, var(--tennis-green-light), var(--tennis-green));
+  color: white;
+  padding: 3rem;
+  border-radius: 15px;
+  margin: 3rem 0;
+}
+
+.program-details h3 {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.detail-item {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.detail-item strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+/* Contact Section Enhancements */
+.contact-info-detailed {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-main {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact-details h3 {
+  color: var(--primary);
+  font-size: 1.4rem;
+  margin: 2rem 0 1rem 0;
+  border-bottom: 2px solid var(--primary);
+  padding-bottom: 0.5rem;
+}
+
+.contact-details ul {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.contact-details li {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  align-items: center;
+}
+
+.contact-details strong {
+  min-width: 120px;
+  color: var(--primary);
+}
+
+/* FAQ Section */
+.faq-section {
+  margin-top: 2rem;
+}
+
+.faq-item {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border-radius: 10px;
+  border-left: 4px solid var(--primary);
+}
+
+.faq-item strong {
+  color: var(--primary);
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.faq-item p {
+  margin: 0;
+  color: #555;
+  line-height: 1.6;
+}
+
 .mission-value:last-child {
   grid-column: 1 / -1; /* make it span full row */
   max-width: 300px;    /* optional: limit width */
@@ -35,7 +167,6 @@
   max-width: 300px;     /* optional: keeps it from stretching */
 }
 
-
 .hero-content {
   position: relative;
   z-index: 1;
@@ -46,6 +177,20 @@
   font-weight: 800;
   margin-bottom: 1.5rem;
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .program-details {
+    padding: 2rem 1rem;
+  }
+  
+  .mission-highlights {
+    padding: 1rem;
+  }
 }
 
 .hero-subtitle {
