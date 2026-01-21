@@ -26,7 +26,7 @@ const About = () => {
               developmental issues including mental retardation, Down syndrome, autism, visual impairment, 
               neurological impairments, and attention deficit disorder. The program engages local high school 
               students as volunteers to develop one-on-one relationships with the athletes, providing a 
-              positive experience for all involved. Our program has been operating for over 30 years, with 
+              positive experience for all involved. Our program has been operating for many years, with 
               some of our athletes participating the entire time.
             </p>
             

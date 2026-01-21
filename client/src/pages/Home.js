@@ -84,7 +84,7 @@ const Home = () => {
               <p className="about-description">
                 Project Lovematch is an annual program which provides basic tennis instruction and activity focused on
 athletes with various developmental issues including mental retardation, down syndrome, autism, visual
-impairment, neurological impairments and attention deficit disorder. For over 30 years, the program has engaged local high school
+impairment, neurological impairments and attention deficit disorder. For many years, the program has engaged local high school
 students as volunteers to develop one-one-one relationships with the athletes, providing a positive
 experience for all involved.
               </p>
