@@ -1,33 +1,19 @@
 {
   "short_name": "Project Lovematch",
   "name": "Project Lovematch - Special Needs Tennis Program",
-  "description": "Tennis program for children with autism, Down syndrome, and developmental disabilities in Franklin Lakes, NJ. 30+ years serving the special needs community.",
+  "description": "Tennis program for children with autism, Down syndrome, and developmental disabilities in Franklin Lakes, NJ. Many years serving the special needs community.",
   "icons": [
     {
-      "src": "favicon.ico",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "images/plm-logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
     },
     {
-      "src": "android-icon-192x192.png",
-      "type": "image/png",
-      "sizes": "192x192",
+      "src": "images/plm-logo.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
       "purpose": "maskable"
-    },
-    {
-      "src": "apple-icon-180x180.png",
-      "type": "image/png",
-      "sizes": "180x180"
-    },
-    {
-      "src": "favicon-32x32.png",
-      "type": "image/png",
-      "sizes": "32x32"
-    },
-    {
-      "src": "favicon-16x16.png",
-      "type": "image/png",
-      "sizes": "16x16"
     }
   ],
   "start_url": "/",
@@ -37,19 +23,5 @@
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en-US",
-  "categories": ["sports", "education", "health", "lifestyle"],
-  "screenshots": [
-    {
-      "src": "images/screenshot-wide.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide"
-    },
-    {
-      "src": "images/screenshot-mobile.png",
-      "sizes": "750x1334",
-      "type": "image/png",
-      "form_factor": "narrow"
-    }
-  ]
+  "categories": ["sports", "education", "health", "lifestyle"]
 }
