@@ -5,23 +5,27 @@ const CalendarPage = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
   const [currentDate, setCurrentDate] = useState(new Date());
 
-  // Generate Sunday sessions for the next 2 years
-  const generateSessions = () => {
-    const sessions = [];
-    const startDate = new Date();
-    const endDate = new Date();
-    endDate.setFullYear(endDate.getFullYear() + 2); // 2 years into the future
+  // ============================================================
+  // SESSION DATES - Add or remove dates here to manage sessions
+  // Format: 'YYYY-MM-DD'
+  // ============================================================
+  const sessionDates = [
+    '2026-02-01',
+    '2026-02-08',
+    '2026-02-15',
+    '2026-02-22',
+    '2026-03-01',
+    '2026-03-08',
+    '2026-03-15',
+    '2026-03-22',
+  ];
+  // ============================================================
 
-    for (let d = new Date(startDate); d <= endDate; d.setDate(d.getDate() + 1)) {
-      // Check if it's Sunday (0) and during January-March
-      if (d.getDay() === 0 && d.getMonth() >= 0 && d.getMonth() <= 2) {
-        sessions.push(new Date(d));
-      }
-    }
-    return sessions;
-  };
-
-  const sessions = generateSessions();
+  // Convert session date strings to Date objects for comparison
+  const sessions = sessionDates.map(dateStr => {
+    const [year, month, day] = dateStr.split('-').map(Number);
+    return new Date(year, month - 1, day);
+  });
 
   // Custom calendar functions
   const getDaysInMonth = (date) => {
@@ -37,9 +41,8 @@ const CalendarPage = () => {
   };
 
   const isSessionDay = (date) => {
-    return sessions.some(session => 
-      session.toDateString() === date.toDateString()
-    );
+    const dateStr = `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+    return sessionDates.includes(dateStr);
   };
 
   const isToday = (date) => {

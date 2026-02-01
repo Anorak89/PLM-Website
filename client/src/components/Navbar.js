@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import logo from '../assets/plm-logo.svg';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -34,6 +35,7 @@ const Navbar = () => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <Link to="/" className="navbar-brand" onClick={closeMenu}>
+          <img src={logo} alt="Project Lovematch Logo" className="navbar-logo" />
           Project Lovematch
         </Link>
 

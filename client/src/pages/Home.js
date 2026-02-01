@@ -83,9 +83,9 @@ const Home = () => {
               <h2 className="section-title">Empowering Through Tennis</h2>
               <p className="about-description">
                 Project Lovematch is an annual program which provides basic tennis instruction and activity focused on
-athletes with various developmental issues including mental retardation, down syndrome, autism, visual
-impairment, neurological impairments and attention deficit disorder. For many years, the program has engaged local high school
-students as volunteers to develop one-one-one relationships with the athletes, providing a positive
+athletes with intellectual/cognitive disabilities including Down syndrome, autism, 
+neurological impairments and attention deficit disorder. For many years, the program has engaged local high school
+students as volunteers to develop one-on-one relationships with the athletes, providing a positive
 experience for all involved.
               </p>
               <p className="about-description">
@@ -246,6 +246,41 @@ experience for all involved.
                   <br />
                   4:00 - 5:00 PM
                 </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Donation Section */}
+      <section className="donation-section">
+        <div className="container">
+          <div className="donation-content">
+            <h2 className="section-title">Support Our Mission</h2>
+            <p className="donation-description">
+              If you would like to help, you can sign up to volunteer or make a tax-deductible donation. 
+              PLM is a 501(c)(3) tax-exempt organization and any amount is welcome! Sponsorships are also 
+              available upon request.
+            </p>
+            <div className="donation-buttons">
+              <button className="btn btn-primary btn-large donate-btn">
+                💝 Donate Here
+              </button>
+            </div>
+            
+            {/* Sponsors Section */}
+            <div className="sponsors-section">
+              <h3 className="sponsors-title">Our Supporters</h3>
+              <div className="sponsors-list">
+                <div className="sponsor-item">
+                  <span className="sponsor-name">Dunkin'</span>
+                </div>
+                <div className="sponsor-item">
+                  <span className="sponsor-name">USTA</span>
+                </div>
+                <div className="sponsor-item">
+                  <span className="sponsor-name">Franklin Lakes Racquet Club</span>
+                </div>
               </div>
             </div>
           </div>

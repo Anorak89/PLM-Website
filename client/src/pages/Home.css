@@ -468,4 +468,116 @@
   .container {
     padding: 0 1rem;
   }
+}
+
+/* Donation Section */
+.donation-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  text-align: center;
+  border-top: 3px solid var(--tennis-green);
+}
+
+.donation-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.donation-description {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  margin: 1.5rem 0 2.5rem;
+  line-height: 1.7;
+}
+
+.donation-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 2rem 0 3rem;
+  flex-wrap: wrap;
+}
+
+.donate-btn {
+  background: linear-gradient(135deg, #f39c12, #e67e22);
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(243, 156, 18, 0.3);
+  transition: all 0.3s ease;
+}
+
+.donate-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(243, 156, 18, 0.4);
+  background: linear-gradient(135deg, #e67e22, #d35400);
+}
+
+.sponsors-section {
+  margin: 3rem 0 2rem;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.sponsors-title {
+  color: var(--tennis-green);
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.sponsors-list {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.sponsor-item {
+  background: linear-gradient(135deg, var(--tennis-green), var(--tennis-green-light));
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.sponsor-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.program-fee-info {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: rgba(45, 90, 39, 0.1);
+  border-radius: 8px;
+  border-left: 4px solid var(--tennis-green);
+}
+
+.fee-note {
+  margin: 0;
+  color: var(--text-dark);
+  font-size: 1rem;
+}
+
+/* Donation Section Mobile Styles */
+@media (max-width: 768px) {
+  .donation-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sponsors-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .donation-section {
+    padding: 3rem 0;
+  }
 } 
