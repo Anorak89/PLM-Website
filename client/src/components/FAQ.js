@@ -10,11 +10,11 @@ import './FAQ.css';
 const faqData = [
   {
     question: "How do I sign up my athlete?",
-    answer: "You can sign up your athlete by clicking the 'Athlete Sign Up' button on our homepage, which will take you to our online registration form. Alternatively, you can contact us at projectlovematch@gmail.com for assistance with registration."
+    answer: "You can sign up your athlete by clicking the \"Athlete Sign Up\" button on our homepage, which will take you to our online registration form. Alternatively, you can contact us at projectlovematch@gmail.com for assistance with registration."
   },
   {
     question: "Who can participate in the program?",
-    answer: "Project Lovematch welcomes athletes age 13 and older with Intellectual and Developmental Disabilities, including Down Syndrome, Autism, and other developmental conditions."
+    answer: "Project Lovematch welcomes athletes age 13 and older with intellectual and developmental disabilities, including Down Syndrome, Autism, and other developmental conditions."
   },
   {
     question: "Does the program cost any money for athletes?",
@@ -30,7 +30,7 @@ const faqData = [
   },
   {
     question: "How can I volunteer?",
-    answer: "High school students and community members interested in volunteering can sign up through the 'Volunteer Sign Up' button on our homepage. Volunteers help provide tennis instruction and help keep athletes socially engaged."
+    answer: "High school students and community members interested in volunteering can sign up through the \"Volunteer Sign Up\" button on our homepage. Volunteers help provide tennis instruction and help keep athletes socially engaged."
   },
   {
     question: "How can I support the program?",
