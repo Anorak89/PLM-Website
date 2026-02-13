@@ -5,6 +5,7 @@ import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import Calendar from './pages/Calendar';
 import About from './pages/About';
+import FAQPage from './pages/FAQPage';
 import './App.css';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/calendar" element={<Calendar />} />
           <Route path="/about" element={<About />} />
+          <Route path="/faq" element={<FAQPage />} />
         </Routes>
       </div>
     </Router>

@@ -79,7 +79,7 @@
 
 .hero-subtitle {
   font-size: 1.5rem;
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
   opacity: 0.95;
   line-height: 1.6;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -90,6 +90,7 @@
   gap: 1.5rem;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 1rem;
 }
 
 .btn-large {
@@ -579,5 +580,116 @@
   
   .donation-section {
     padding: 3rem 0;
+  }
+}
+
+/* Donation Info Box */
+.donation-info-box {
+  background: rgba(45, 90, 39, 0.08);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  margin: 2rem auto;
+  max-width: 400px;
+  border: 2px solid var(--tennis-green);
+}
+
+.donation-info-box h4 {
+  color: var(--tennis-green);
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.donation-address {
+  color: var(--text-dark);
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* Contact Section on Home Page */
+.home .contact-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, var(--tennis-green) 0%, var(--tennis-green-dark, #1a5a3a) 100%);
+  color: white;
+}
+
+.home .contact-section .section-title {
+  color: white;
+}
+
+.home .contact-section .section-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+}
+
+.contact-content {
+  text-align: center;
+}
+
+.contact-info-simple {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.contact-email-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50px;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.contact-email-link:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.contact-icon {
+  font-size: 1.5rem;
+}
+
+.contact-email {
+  color: white;
+}
+
+/* Hero Button Style - Consistent buttons for hero section */
+.hero-btn {
+  background: white;
+  border: 2px solid white;
+  color: var(--tennis-green);
+  padding: 0.875rem 2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background: transparent;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* Responsive adjustments for new sections */
+@media (max-width: 768px) {
+  .home .contact-section {
+    padding: 3rem 0;
+  }
+  
+  .contact-email-link {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+  
+  .donation-info-box {
+    margin: 1.5rem 1rem;
+    padding: 1.25rem 1.5rem;
   }
 } 

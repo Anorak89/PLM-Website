@@ -1,0 +1,87 @@
+/* FAQ Page Styles */
+.faq-page {
+  min-height: 100vh;
+  background: var(--gray-50, #f7fafc);
+}
+
+/* FAQ Hero Section */
+.faq-hero {
+  background: linear-gradient(135deg, var(--tennis-green, #2d5a27) 0%, var(--tennis-green-light, #4a7c59) 100%);
+  padding: 4rem 0;
+  text-align: center;
+  color: white;
+}
+
+.faq-page-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.faq-page-subtitle {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* FAQ Content Section */
+.faq-content-section {
+  padding: 4rem 0;
+}
+
+/* Contact CTA Section */
+.faq-contact-section {
+  padding: 4rem 0;
+  background: white;
+}
+
+.faq-contact-content {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.faq-contact-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-dark, #1a202c);
+  margin-bottom: 1rem;
+}
+
+.faq-contact-content p {
+  font-size: 1.1rem;
+  color: var(--text-medium, #4a5568);
+  margin-bottom: 2rem;
+  line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .faq-hero {
+    padding: 3rem 0;
+  }
+
+  .faq-page-title {
+    font-size: 2rem;
+  }
+
+  .faq-page-subtitle {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .faq-content-section {
+    padding: 2rem 0;
+  }
+
+  .faq-contact-section {
+    padding: 3rem 0;
+  }
+
+  .faq-contact-content h2 {
+    font-size: 1.5rem;
+  }
+}

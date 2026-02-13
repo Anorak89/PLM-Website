@@ -73,6 +73,15 @@ const Navbar = () => {
               About
             </Link>
           </li>
+          <li>
+            <Link 
+              to="/faq" 
+              className={`navbar-link ${isActive('/faq') ? 'active' : ''}`}
+              onClick={closeMenu}
+            >
+              FAQ
+            </Link>
+          </li>
           <li 
             className="navbar-dropdown"
             onMouseEnter={() => setIsSignUpOpen(true)}
@@ -95,10 +104,15 @@ const Navbar = () => {
                 </a>
               </li>
               <li>
-                <span className="dropdown-link disabled">
+                <a 
+                  href="https://docs.google.com/forms/d/e/1FAIpQLScE1W0pijbXJkpvf9As8mimb0yn2c_AaJvuk0o52AqooApgIg/viewform" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="dropdown-link"
+                  onClick={closeMenu}
+                >
                   Athlete Sign Up
-                  <span className="coming-soon">Coming Soon</span>
-                </span>
+                </a>
               </li>
             </ul>
           </li>

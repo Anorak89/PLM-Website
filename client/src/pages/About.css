@@ -376,8 +376,7 @@
   padding: 2rem;
   background: linear-gradient(135deg, #f8f9fa, #e9ecef);
   border-radius: 12px;
-  border-left: 4px solid var(--tennis-green);
-  text-align: left;
+  text-align: center;
 }
 
 .donation-info h3 {
@@ -397,4 +396,27 @@
   margin-bottom: 0;
   font-weight: 600;
   color: var(--tennis-green);
+}
+
+.donation-address-box {
+  margin-top: 1.5rem;
+  padding: 1.25rem 1.5rem;
+  background: rgba(46, 139, 87, 0.08);
+  border-radius: 8px;
+  border: 2px solid var(--tennis-green);
+  display: inline-block;
+}
+
+.donation-address-box h4 {
+  color: var(--tennis-green);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.donation-address-box p {
+  color: var(--text-dark);
+  line-height: 1.8;
+  margin: 0;
+  font-weight: 500;
 } 

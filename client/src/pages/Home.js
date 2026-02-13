@@ -11,6 +11,7 @@ const Home = () => {
   const aboutRef = useRef(null);
   const photosRef = useRef(null);
   const ctaRef = useRef(null);
+  const contactRef = useRef(null);
 
   useEffect(() => {
     const observerOptions = {
@@ -27,7 +28,7 @@ const Home = () => {
     }, observerOptions);
 
     // Observe all sections
-    [heroRef, aboutRef, photosRef, ctaRef].forEach(ref => {
+    [heroRef, aboutRef, photosRef, ctaRef, contactRef].forEach(ref => {
       if (ref.current) {
         observer.observe(ref.current);
       }
@@ -55,14 +56,22 @@ const Home = () => {
             </p>
             <div className="hero-buttons">
               <a 
+                href="https://docs.google.com/forms/d/e/1FAIpQLScE1W0pijbXJkpvf9As8mimb0yn2c_AaJvuk0o52AqooApgIg/viewform" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="btn hero-btn"
+              >
+                Athlete Sign Up
+              </a>
+              <a 
                 href="https://forms.gle/g9Cgfbo2Mixnjy8n9" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="btn btn-primary"
+                className="btn hero-btn"
               >
-                Join Our Program
+                Volunteer Sign Up
               </a>
-              <Link to="/about" className="btn btn-secondary">
+              <Link to="/about" className="btn hero-btn">
                 Learn More
               </Link>
             </div>
@@ -83,10 +92,10 @@ const Home = () => {
               <h2 className="section-title">Empowering Through Tennis</h2>
               <p className="about-description">
                 Project Lovematch is an annual program which provides basic tennis instruction and activity focused on
-athletes with intellectual/cognitive disabilities including Down syndrome, autism, 
-neurological impairments and attention deficit disorder. For many years, the program has engaged local high school
-students as volunteers to develop one-on-one relationships with the athletes, providing a positive
-experience for all involved.
+athletes (age 13+) with Intellectual and Developmental Disabilities (I/DD), including Down Syndrome, Autism, 
+and other developmental conditions. For over 30 years, the program has engaged local high school
+students as volunteers who aspire to develop one-on-one relationships with athletes as resources permit, providing positive
+social interactions and a rewarding experience for all involved.
               </p>
               <p className="about-description">
                 The Program is offered at the Franklin Lakes Racquet Club on ten Sundays from January through March from 4:00 to 5:00 PM.
@@ -262,26 +271,48 @@ experience for all involved.
               PLM is a 501(c)(3) tax-exempt organization and any amount is welcome! Sponsorships are also 
               available upon request.
             </p>
-            <div className="donation-buttons">
-              <button className="btn btn-primary btn-large donate-btn">
-                💝 Donate Here
-              </button>
+            <div className="donation-info-box">
+              <h4>Send Donations To:</h4>
+              <p className="donation-address">
+                Project Lovematch<br />
+                PO Box 64<br />
+                Allendale, NJ 07401
+              </p>
             </div>
             
             {/* Sponsors Section */}
             <div className="sponsors-section">
-              <h3 className="sponsors-title">Our Supporters</h3>
+              <h3 className="sponsors-title">Our Sponsors</h3>
               <div className="sponsors-list">
                 <div className="sponsor-item">
-                  <span className="sponsor-name">Dunkin'</span>
+                  <span className="sponsor-name">USTA - Eastern Region</span>
                 </div>
                 <div className="sponsor-item">
-                  <span className="sponsor-name">USTA</span>
+                  <span className="sponsor-name">The Haar Family Foundation</span>
                 </div>
                 <div className="sponsor-item">
                   <span className="sponsor-name">Franklin Lakes Racquet Club</span>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section ref={contactRef} className="contact-section fade-in">
+        <div className="container">
+          <div className="contact-content">
+            <h2 className="section-title">Contact Us</h2>
+            <p className="section-subtitle">
+              Have questions about our program? We'd love to hear from you.
+            </p>
+            
+            <div className="contact-info-simple">
+              <a href="mailto:projectlovematch@gmail.com" className="contact-email-link">
+                <span className="contact-icon">📧</span>
+                <span className="contact-email">projectlovematch@gmail.com</span>
+              </a>
             </div>
           </div>
         </div>
