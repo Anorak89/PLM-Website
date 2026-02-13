@@ -23,7 +23,7 @@ const About = () => {
             <h2 className="section-title">Our Mission</h2>
             <p className="mission-text">
               Project Lovematch provides basic tennis instruction and activity focused on athletes (age 13+) with 
-              Intellectual and Developmental Disabilities (I/DD), including Down Syndrome, Autism, and other 
+              intellectual and developmental disabilities, including Down Syndrome, Autism, and other 
               developmental conditions. The program engages local high school students as volunteers 
               who aspire to develop one-on-one relationships with athletes as resources permit, providing positive social 
               interactions and a rewarding experience for all involved. Our program has been operating for over 30 years, 
