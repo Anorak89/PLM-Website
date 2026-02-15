@@ -34,7 +34,7 @@ const faqData = [
   },
   {
     question: "How can I support the program?",
-    answer: "You can support Project Lovematch by making a tax-deductible donation. We are a 501(c)(3) organization. Donations can be sent to: Project Lovematch, PO Box 64, Allendale, NJ 07401. Sponsorship opportunities are also available upon request."
+    answer: "You can support Project Lovematch by making a tax-deductible donation. We are a 501(c)(3) organization. Donations can be sent to: Project Lovematch, PO Box 64, Allendale, NJ 07401."
   },
   {
     question: "Where is the program held?",
