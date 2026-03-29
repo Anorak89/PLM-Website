@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
 import img1 from '../assets/IMG_9252.JPG';
@@ -6,12 +6,62 @@ import img2 from '../assets/IMG_9257.JPG';
 import img3 from '../assets/IMG_9301.JPG';
 import img4 from '../assets/IMG_9304.JPG';
 
+const testimonials = [
+  {
+    quote:
+      'Our family has volunteered with Project Lovematch for several years.  It is a rewarding experience to get to know the Athletes and watch their tennis skills develop.  You definitely do not need to be an expert in tennis to volunteer.',
+    author: 'Bill Thomas'
+  },
+  {
+    quote:
+      'I really enjoy project lovematch program cause it helped me with my tennis skills! I also enjoy the volunteers they were very helpful with giving advice on what to do the basics skills!',
+    author: 'Kelly Bloomer'
+  },
+  {
+    quote:
+      'A few years ago my son walked into Project Lovematch not knowing a thing about tennis. Today he is a competitive athlete with a consistently accurate serve and a love for the game.  We owe much of that to the dedicated coaches and volunteers at PLM who create a positive and fun experience. We highly recommend this program!!',
+    author: 'Barb Jones'
+  },
+  {
+    quote:
+      'Project Lovematch has been an amazing program for Ursula for many years. The Coaches and Volunteers are patient and encouraging. We have seen great growth in her skills and confidence. It was the start for her love for Tennis. We are so grateful for this well organized program and the joy it brings to the participants.',
+    author: ''
+  },
+  {
+    quote:
+      'I have been volunteering at PLM for several years now. This experience has taught me the importance of acceptance and inclusion. The athletes have taught me so much. Volunteering at PLM has made me a more patient, caring, and empathetic person.',
+    author: 'Noah C'
+  }
+];
+
 const Home = () => {
   const heroRef = useRef(null);
   const aboutRef = useRef(null);
   const photosRef = useRef(null);
+  const testimonialsRef = useRef(null);
   const ctaRef = useRef(null);
   const contactRef = useRef(null);
+  const [activeTestimonial, setActiveTestimonial] = useState(0);
+  const [testimonialTimerResetKey, setTestimonialTimerResetKey] = useState(0);
+
+  const resetTestimonialTimer = () => {
+    setTestimonialTimerResetKey((current) => current + 1);
+  };
+
+  const selectTestimonial = (index) => {
+    setActiveTestimonial(index);
+    resetTestimonialTimer();
+  };
+
+  const showPreviousTestimonial = () => {
+    setActiveTestimonial((current) => (current - 1 + testimonials.length) % testimonials.length);
+    resetTestimonialTimer();
+  };
+
+  const showNextTestimonial = () => {
+    setActiveTestimonial((current) => (current + 1) % testimonials.length);
+    resetTestimonialTimer();
+  };
 
   useEffect(() => {
     const observerOptions = {
@@ -28,7 +78,7 @@ const Home = () => {
     }, observerOptions);
 
     // Observe all sections
-    [heroRef, aboutRef, photosRef, ctaRef, contactRef].forEach(ref => {
+    [heroRef, aboutRef, photosRef, testimonialsRef, ctaRef, contactRef].forEach(ref => {
       if (ref.current) {
         observer.observe(ref.current);
       }
@@ -36,6 +86,14 @@ const Home = () => {
 
     return () => observer.disconnect();
   }, []);
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setActiveTestimonial((current) => (current + 1) % testimonials.length);
+    }, 7000);
+
+    return () => clearTimeout(timeoutId);
+  }, [activeTestimonial, testimonialTimerResetKey]);
 
   return (
     <div className="home">
@@ -213,6 +271,57 @@ social interactions and a rewarding experience for all involved.
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section ref={testimonialsRef} className="testimonials-section fade-in">
+        <div className="container">
+          <h2 className="section-title">What Families And Volunteers Say</h2>
+          <p className="section-subtitle">
+            Stories from our community that reflect the impact of Project Lovematch
+          </p>
+
+          <div className="testimonial-carousel">
+            <button
+              type="button"
+              className="testimonial-arrow"
+              onClick={showPreviousTestimonial}
+              aria-label="Show previous testimonial"
+            >
+              &lt;
+            </button>
+
+            <div key={activeTestimonial} className="testimonial-card testimonial-slide" aria-live="polite">
+              <p className="testimonial-quote">"{testimonials[activeTestimonial].quote}"</p>
+              {testimonials[activeTestimonial].author && (
+                <p className="testimonial-author">{testimonials[activeTestimonial].author}</p>
+              )}
+            </div>
+
+            <button
+              type="button"
+              className="testimonial-arrow"
+              onClick={showNextTestimonial}
+              aria-label="Show next testimonial"
+            >
+              &gt;
+            </button>
+          </div>
+
+          <div className="testimonial-dots" role="tablist" aria-label="Testimonials">
+            {testimonials.map((testimonial, index) => (
+              <button
+                key={testimonial.author + index}
+                className={`testimonial-dot ${index === activeTestimonial ? 'active' : ''}`}
+                onClick={() => selectTestimonial(index)}
+                aria-label={`Show testimonial ${index + 1}`}
+                aria-selected={index === activeTestimonial}
+                role="tab"
+                type="button"
+              />
+            ))}
           </div>
         </div>
       </section>
